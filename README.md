@@ -1,10 +1,10 @@
-🪟 CeylonShade — Sri Lankan Window Blinds Digital Showcase
+# 🪟 CeylonShade — Sri Lankan Window Blinds Digital Showcase
 
 A modern, responsive digital showcase and product catalogue for **CeylonShade**, a Sri Lankan window blinds brand. Built with React + Vite, this web application presents the product range, supports custom sizing, and allows customers to submit product inquiries directly from the site.
 
 ---
 
-✨ Features
+## ✨ Features
 
 - **Hero Landing Page** — Visually rich hero section with brand messaging and call-to-action
 - **Product Category Grid** — Browse products by category with a dynamic grid layout
@@ -17,7 +17,7 @@ A modern, responsive digital showcase and product catalogue for **CeylonShade**,
 
 ---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 | Technology | Version | Purpose |
 |---|---|---|
@@ -30,7 +30,7 @@ A modern, responsive digital showcase and product catalogue for **CeylonShade**,
 
 ---
 
-📁 Project Structure
+## 📁 Project Structure
 
 ```
 ceylonshade-landing/
@@ -74,7 +74,7 @@ ceylonshade-landing/
 
 ---
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -118,7 +118,7 @@ npm run preview
 
 ---
 
-🗺️ Routes
+## 🗺️ Routes
 
 | Route | Page |
 |---|---|
@@ -128,7 +128,7 @@ npm run preview
 
 ---
 
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to open a pull request or raise an issue.
 
