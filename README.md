@@ -21,12 +21,12 @@ A modern, responsive digital showcase and product catalogue for **CeylonShade**,
 
 | Technology | Version | Purpose |
 |---|---|---|
-| [React](https://react.dev/) | ^18 | UI Framework |
-| [Vite](https://vitejs.dev/) | ^8.2 | Build tool & dev server |
-| [React Router DOM](https://reactrouter.com/) | ^7.18 | Client-side routing |
-| [Tailwind CSS](https://tailwindcss.com/) | ^3.4 | Utility-first styling |
-| [PostCSS](https://postcss.org/) | ^8.5 | CSS processing |
-| [TypeScript](https://www.typescriptlang.org/) | ~6.0 | Type checking |
+| [React](https://react.dev/) | 18 | UI Framework |
+| [Vite](https://vitejs.dev/) | 8.2 | Build tool & dev server |
+| [React Router DOM](https://reactrouter.com/) | 7.18 | Client-side routing |
+| [Tailwind CSS](https://tailwindcss.com/) | 3.4 | Utility-first styling |
+| [PostCSS](https://postcss.org/) | 8.5 | CSS processing |
+| [TypeScript](https://www.typescriptlang.org/) | 6.0 | Type checking |
 
 ---
 
