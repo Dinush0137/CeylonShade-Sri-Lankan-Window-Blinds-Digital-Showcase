@@ -1,15 +1,15 @@
 import { useInquiryModal } from '../../context/InquiryModalContext';
 
-export default function SummaryCard({ width, drop, unit, density }) {
+export default function SummaryCard({ width, drop, unit, density, selectedProduct }) {
   const { openInquiryModal } = useInquiryModal();
 
   const dimensionsDisplay =
     width && drop ? `${width} x ${drop} ${unit}` : '-- x -- cm';
 
   const currentProduct = {
-    name: 'Heritage Bamboo Blind',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHltTgaOFSrNJlYqIbbv3Drk00C38YwJ4buI1ttmWf-9mwk7BWZtpIp0e8g6wNzH53ONv8HFxixiLs2pTAMj11rsZgQUVVzVGPmu4kxMxMOi6EBFrHTPYi1VT9e_r1UmG1yz1tmP3q5aHr-xiykS8dQFhA_-gjfTlgLegEzUfbayyVHdlU8M8KOznKJyqWD07mrkv0qPk3NpuQT0ixgM-rIYOaeBn9vAufTIksgy60KpN6FyerebAggA',
-    imageAlt: 'Product Preview',
+    name: selectedProduct?.name || 'Heritage Bamboo Blind',
+    imageUrl: selectedProduct?.imageSrc || 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHltTgaOFSrNJlYqIbbv3Drk00C38YwJ4buI1ttmWf-9mwk7BWZtpIp0e8g6wNzH53ONv8HFxixiLs2pTAMj11rsZgQUVVzVGPmu4kxMxMOi6EBFrHTPYi1VT9e_r1UmG1yz1tmP3q5aHr-xiykS8dQFhA_-gjfTlgLegEzUfbayyVHdlU8M8KOznKJyqWD07mrkv0qPk3NpuQT0ixgM-rIYOaeBn9vAufTIksgy60KpN6FyerebAggA',
+    imageAlt: selectedProduct?.imageAlt || 'Product Preview',
     widthCm: width,
     heightCm: drop,
     densityLabel: density,
@@ -21,11 +21,15 @@ export default function SummaryCard({ width, drop, unit, density }) {
         <h3 className="font-headline-sm text-headline-sm text-on-surface border-b border-outline-variant pb-md">Summary</h3>
         <div className="flex gap-md mt-sm">
           <div className="w-20 h-24 rounded-lg bg-surface-variant overflow-hidden shrink-0">
-            <img alt="Product Preview" className="w-full h-full object-cover" data-alt="A beautifully styled interior window featuring a custom woven natural blind, partially drawn down. The room exhibits tropical modern luxury, with off-white walls, a hint of a lush green plant out of focus in the foreground, and warm, inviting sunlight filtering through the blind. The overall palette is cream, tan, and soft organic greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHltTgaOFSrNJlYqIbbv3Drk00C38YwJ4buI1ttmWf-9mwk7BWZtpIp0e8g6wNzH53ONv8HFxixiLs2pTAMj11rsZgQUVVzVGPmu4kxMxMOi6EBFrHTPYi1VT9e_r1UmG1yz1tmP3q5aHr-xiykS8dQFhA_-gjfTlgLegEzUfbayyVHdlU8M8KOznKJyqWD07mrkv0qPk3NpuQT0ixgM-rIYOaeBn9vAufTIksgy60KpN6FyerebAggA" />
+            <img
+              alt={currentProduct.imageAlt}
+              className="w-full h-full object-cover"
+              src={currentProduct.imageUrl}
+            />
           </div>
           <div className="flex flex-col justify-center">
-            <span className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Natural Weave</span>
-            <span className="font-body-lg text-body-lg text-on-surface mt-xs">Heritage Bamboo Blind</span>
+            <span className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">{selectedProduct?.category || 'Natural Weave'}</span>
+            <span className="font-body-lg text-body-lg text-on-surface mt-xs">{currentProduct.name}</span>
           </div>
         </div>
         <div className="flex flex-col gap-sm py-md border-y border-outline-variant">

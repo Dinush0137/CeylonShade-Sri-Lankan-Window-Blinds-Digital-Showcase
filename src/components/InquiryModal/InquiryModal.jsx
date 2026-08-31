@@ -6,8 +6,8 @@ import SuccessView from './SuccessView.jsx';
 // ---------------------------------------------------------------------------
 // Config — replace with real values before going live
 // ---------------------------------------------------------------------------
-const WHATSAPP_NUMBER = '94771234567'; // TODO: replace with Premiyo Corporation's real WhatsApp Business number
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_ME'; // TODO: replace with Premiyo Corporation's real Formspree form ID
+const WHATSAPP_NUMBER = '94771234567'; // Can replace with Premiyo Corporation's real WhatsApp Business number
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_ME'; // Can replace with Premiyo Corporation's real Formspree form ID
 
 // ---------------------------------------------------------------------------
 // Validation helpers

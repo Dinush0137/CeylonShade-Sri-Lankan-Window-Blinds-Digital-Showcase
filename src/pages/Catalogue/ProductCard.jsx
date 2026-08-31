@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function ProductCard({ imageSrc, imageAlt, category, title, description, tags, priceRange }) {
+  const navigate = useNavigate();
   const isBamboo = category === "Bamboo & Cane";
   const tagBgClass = isBamboo ? "bg-[#F0E6D2]" : "bg-surface-variant";
   const tagTextClass = isBamboo ? "text-[#1F3B57]" : "text-on-surface-variant";
@@ -27,8 +30,11 @@ export default function ProductCard({ imageSrc, imageAlt, category, title, descr
         </div>
         <div className="flex items-center justify-between border-t border-surface-variant pt-md mt-auto">
           <div className="text-body-lg font-body-lg font-semibold text-primary">{priceRange}</div>
-          <button className="text-secondary hover:text-on-secondary-fixed-variant transition-colors flex items-center gap-xs text-label-md font-label-md">
-            View Details <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
+          <button 
+            onClick={() => navigate('/custom-sizing', { state: { product: { name: title, category: category, imageSrc: imageSrc, imageAlt: imageAlt } } })}
+            className="text-secondary hover:text-on-secondary-fixed-variant transition-colors flex items-center gap-xs text-label-md font-label-md"
+          >
+            Get a Custom Quote <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
           </button>
         </div>
       </div>
