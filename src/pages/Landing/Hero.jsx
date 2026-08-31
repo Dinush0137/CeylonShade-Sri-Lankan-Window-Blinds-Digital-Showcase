@@ -22,7 +22,10 @@ export default function Hero() {
           >
             Get a Custom Quote
           </button>
-          <button className="border-[1.5px] border-[#1F3B57] text-[#1F3B57] hover:bg-surface-container-low font-label-md text-label-md px-xl py-md rounded-full transition-all duration-300">
+          <button 
+            onClick={() => navigate('/catalogue')}
+            className="border-[1.5px] border-[#1F3B57] text-[#1F3B57] hover:bg-surface-container-low font-label-md text-label-md px-xl py-md rounded-full transition-all duration-300"
+          >
             View All Blinds
           </button>
         </div>
